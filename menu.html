@@ -4,144 +4,121 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Comida Popular Colombiana | Sitio Informativo</title>
+<title>Menú Comida Colombiana | Sitio Informativo</title>
 
-<meta name="description" content="Sitio informativo sobre comida popular colombiana. Recetas, cultura y tradición gastronómica.">
-
-<!-- Google tag -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18004518818"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-18004518818');
-</script>
+<meta name="description" content="Menú informativo de comida popular colombiana. Conoce platos típicos y tradicionales.">
 
 <style>
 
-/* BASE */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
+/* RESET */
+html, body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+  font-family:'Inter',system-ui,Arial,sans-serif;
+  background:#050b0f;
+  color:#e6fff4;
 }
 
 /* HEADER */
-header {
-    background: #00aa30;
-    padding: 15px;
-    color: white;
-    text-align: center;
+header{
+  position:sticky;
+  top:0;
+  z-index:99;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+  background:rgba(0,255,153,.12);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(0,255,153,.25);
 }
 
-/* HERO */
-.hero {
-    background: #00bd35;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+header .left{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
-.hero h1 {
-    font-size: 40px;
-    margin: 0;
+header .icon{
+  font-size:24px;
+  cursor:pointer;
+  color:#00ff99;
 }
 
-.hero p {
-    max-width: 500px;
-    margin-top: 15px;
+header .title{
+  font-size:20px;
+  font-weight:600;
 }
 
-.hero button {
-    margin-top: 25px;
-    padding: 12px 30px;
-    background: #009f2b;
-    border: none;
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
+/* CONTENEDOR */
+.container{
+  padding:24px 18px 40px;
+  max-width:720px;
+  margin:auto;
 }
 
-/* MENÚ */
-.menu {
-    padding: 40px 20px;
-    text-align: center;
+.titulo{
+  font-size:30px;
+  font-weight:600;
+  margin-bottom:24px;
+  color:#00ff99;
+  text-align:center;
 }
 
-.menu h2 {
-    font-size: 30px;
-    margin-bottom: 25px;
+/* CATEGORÍA */
+.categoria{
+  margin-top:20px;
+  margin-bottom:18px;
+  font-size:22px;
+  font-weight:600;
+  color:#7affc9;
+  border-left:4px solid #00ff99;
+  padding-left:10px;
 }
 
-.menu-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* ITEMS */
+.item{
+  padding:16px 18px;
+  margin-bottom:14px;
+  background:linear-gradient(135deg,rgba(0,255,153,.12),rgba(0,255,153,.05));
+  border-radius:14px;
+  border:1px solid rgba(0,255,153,.25);
+  box-shadow:0 0 18px rgba(0,255,153,.15);
+  transition:.2s;
 }
 
-.card {
-    background: #f5f5f5;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
-    transition: 0.2s;
+.item:hover{
+  transform:translateY(-2px);
 }
 
-.card:hover {
-    transform: scale(1.03);
-}
-
-.card h3 {
-    margin-top: 0;
-    color: #00aa30;
+.nombre{
+  font-size:17px;
 }
 
 /* FOOTER */
-footer {
-    background: #00aa30;
-    padding: 20px;
-    text-align: center;
+footer{
+  padding:26px 20px;
+  border-top:1px solid rgba(0,255,153,.25);
 }
 
-/* POPUP LEGAL */
-#legalPopup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+footer button{
+  width:100%;
+  padding:16px;
+  font-size:18px;
+  font-weight:700;
+  border-radius:14px;
+  border:none;
+  background:linear-gradient(135deg,#00ff99,#00cc77);
+  color:#022015;
+  cursor:pointer;
 }
 
-.popup-content {
-    background: white;
-    width: 90%;
-    max-width: 600px;
-    max-height: 80vh;
-    overflow-y: auto;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.popup-content button {
-    margin-top: 15px;
-    padding: 12px;
-    width: 100%;
-    background: #00aa30;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
+/* RESPONSIVE */
+@media(max-width:480px){
+  .titulo{font-size:26px}
+  .categoria{font-size:19px}
 }
 
 </style>
@@ -149,110 +126,55 @@ footer {
 
 <body>
 
-<!-- POPUP LEGAL -->
-<div id="legalPopup">
-    <div class="popup-content">
-        <h2>Términos y Condiciones</h2>
-
-        <p>
-        Este sitio web es un portal <strong>informativo</strong> sobre comida popular colombiana.
-        No vendemos productos ni solicitamos datos financieros.
-        </p>
-
-        <h3>Uso del sitio</h3>
-        <p>
-        El contenido es solo educativo y cultural. El usuario es responsable del uso.
-        </p>
-
-        <h3>Publicidad</h3>
-        <p>
-        Este sitio puede mostrar anuncios mediante Google Ads.
-        </p>
-
-        <h3>Privacidad</h3>
-        <p>
-        Usamos cookies básicas para mejorar la experiencia.
-        No recopilamos datos sensibles ni financieros.
-        </p>
-
-        <h3>Importante</h3>
-        <p>
-        Este sitio NO ofrece servicios financieros, préstamos ni inversiones.
-        </p>
-
-        <button onclick="aceptar()">Aceptar y continuar</button>
-    </div>
-</div>
-
 <!-- HEADER -->
 <header>
-    <h2>Comida Colombiana</h2>
+  <div class="left">
+    <span class="icon" onclick="history.back()">&#8592;</span>
+    <span class="title">Menú</span>
+  </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <h1>Comida Popular Colombiana</h1>
-    <p>
-        Descubre recetas y cultura gastronómica de Colombia.
-        Sitio 100% informativo.
-    </p>
+<!-- CONTENIDO -->
+<div class="container">
 
-    <button onclick="document.querySelector('.menu').scrollIntoView({behavior:'smooth'})">
-        Ver menú
-    </button>
-</section>
+  <h1 class="titulo">Menú Colombiano</h1>
 
-<!-- MENÚ -->
-<section class="menu">
+  <!-- DESAYUNOS -->
+  <div class="categoria">Desayunos</div>
+  <div class="item"><span class="nombre">Calentado con huevo</span></div>
+  <div class="item"><span class="nombre">Arepa con queso</span></div>
+  <div class="item"><span class="nombre">Huevos pericos</span></div>
+  <div class="item"><span class="nombre">Chocolate caliente</span></div>
+  <div class="item"><span class="nombre">Café con leche</span></div>
 
-    <h2>Nuestro Menú</h2>
+  <!-- ALMUERZOS -->
+  <div class="categoria">Almuerzos</div>
+  <div class="item"><span class="nombre">Bandeja paisa</span></div>
+  <div class="item"><span class="nombre">Sancocho</span></div>
+  <div class="item"><span class="nombre">Ajiaco</span></div>
+  <div class="item"><span class="nombre">Arroz con pollo</span></div>
+  <div class="item"><span class="nombre">Carne asada con yuca</span></div>
 
-    <div class="menu-container">
+  <!-- COMIDA RÁPIDA -->
+  <div class="categoria">Comida rápida</div>
+  <div class="item"><span class="nombre">Empanadas</span></div>
+  <div class="item"><span class="nombre">Arepa rellena</span></div>
+  <div class="item"><span class="nombre">Papa rellena</span></div>
 
-        <div class="card">
-            <h3>Bandeja Paisa</h3>
-            <p>Arroz, frijoles, carne, chicharrón, huevo y aguacate.</p>
-        </div>
+  <!-- BEBIDAS -->
+  <div class="categoria">Bebidas</div>
+  <div class="item"><span class="nombre">Jugo natural</span></div>
+  <div class="item"><span class="nombre">Aguapanela</span></div>
+  <div class="item"><span class="nombre">Limonada</span></div>
 
-        <div class="card">
-            <h3>Arepa</h3>
-            <p>Tradicional arepa colombiana con queso.</p>
-        </div>
-
-        <div class="card">
-            <h3>Sancocho</h3>
-            <p>Sopa con carne, yuca, papa y plátano.</p>
-        </div>
-
-        <div class="card">
-            <h3>Ajiaco</h3>
-            <p>Sopa bogotana con pollo y papa.</p>
-        </div>
-
-        <div class="card">
-            <h3>Empanadas</h3>
-            <p>Fritas rellenas de carne o pollo.</p>
-        </div>
-
-        <div class="card">
-            <h3>Lechona</h3>
-            <p>Cerdo relleno con arroz y especias.</p>
-        </div>
-
-    </div>
-
-</section>
+</div>
 
 <!-- FOOTER -->
 <footer>
-    <p>© Sitio informativo gastronómico colombiano</p>
+  <button onclick="window.location.href='index.html'">
+    Volver al inicio
+  </button>
 </footer>
-
-<script>
-function aceptar() {
-    document.getElementById("legalPopup").style.display = "none";
-}
-</script>
 
 </body>
 </html>
