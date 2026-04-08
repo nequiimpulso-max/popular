@@ -3,20 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18066577532"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-18066577532');
 </script>
+
 <title>Comida Popular Colombiana | Sitio Informativo</title>
 
 <meta name="description" content="Sitio informativo sobre comida popular colombiana. Recetas, cultura y tradición gastronómica.">
-
-
 
 <style>
 
@@ -66,14 +65,37 @@ header {
     cursor: pointer;
 }
 
+/* CONTACTO */
+.contacto {
+    background: #f5f5f5;
+    padding: 25px;
+    text-align: center;
+}
+
+.contacto p {
+    margin: 5px 0;
+}
+
+/* SECCIÓN INFO */
+.info {
+    padding: 30px;
+    text-align: center;
+}
+
+.info p {
+    max-width: 700px;
+    margin: 10px auto;
+}
+
 /* FOOTER */
 footer {
     background: #00aa30;
     padding: 20px;
     text-align: center;
+    color: white;
 }
 
-/* 🔥 POPUP LEGAL */
+/* POPUP LEGAL */
 #legalPopup {
     position: fixed;
     top: 0;
@@ -97,10 +119,6 @@ footer {
     border-radius: 10px;
 }
 
-.popup-content h2 {
-    margin-top: 0;
-}
-
 .popup-content button {
     margin-top: 15px;
     padding: 12px;
@@ -117,7 +135,7 @@ footer {
 
 <body>
 
-<!-- 🔥 POPUP LEGAL -->
+<!-- POPUP LEGAL -->
 <div id="legalPopup">
     <div class="popup-content">
         <h2>Términos y Condiciones</h2>
@@ -165,9 +183,28 @@ footer {
         Este es un sitio completamente informativo.
     </p>
 
-   <a href="menu.html">
-    <button>Ver menú</button>
-</a>
+    <a href="menu.html">
+        <button>Ver menú</button>
+    </a>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto">
+    <h3>Contacto</h3>
+    <p><strong>Dirección:</strong> Calle 123 #45-67, Medellín, Colombia</p>
+    <p><strong>Teléfono:</strong> +57 300 123 4567</p>
+</section>
+
+<!-- INFO EXTRA -->
+<section class="info">
+    <h3>Sobre la gastronomía colombiana</h3>
+    <p>
+        La comida colombiana es una mezcla de tradiciones indígenas, españolas y africanas, lo que la convierte en una de las más diversas de América Latina. Cada región tiene platos únicos llenos de sabor y cultura.
+    </p>
+
+    <p>
+        Desde la bandeja paisa hasta el ajiaco, pasando por las arepas y empanadas, Colombia ofrece una gran variedad de recetas tradicionales que reflejan su historia y riqueza cultural.
+    </p>
 </section>
 
 <!-- FOOTER -->
@@ -180,7 +217,6 @@ function aceptar() {
     document.getElementById("legalPopup").style.display = "none";
 }
 </script>
-     
 
 </body>
 </html>
