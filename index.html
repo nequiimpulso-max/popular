@@ -4,220 +4,109 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google tag (gtag.js) -->
+<title>Recetas Colombianas Tradicionales</title>
+<meta name="description" content="Descubre recetas auténticas de la comida colombiana con ingredientes, preparación y tradición cultural.">
+
+<!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18066577532"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18066577532');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);} 
+gtag('js', new Date());
+gtag('config', 'AW-18066577532');
 </script>
 
-<title>Comida Popular Colombiana | Sitio Informativo</title>
-
-<meta name="description" content="Sitio informativo sobre comida popular colombiana. Recetas, cultura y tradición gastronómica.">
-
 <style>
-
-/* BASE */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-
-/* HEADER */
-header {
-    background: #00aa30;
-    padding: 15px;
-    color: white;
-}
-
-/* HERO */
-.hero {
-    background: #00bd35;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 40px;
-}
-
-.hero p {
-    max-width: 500px;
-}
-
-.hero button {
-    margin-top: 25px;
-    padding: 12px 30px;
-    background: #009f2b;
-    border: none;
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-/* CONTACTO */
-.contacto {
-    background: #f5f5f5;
-    padding: 25px;
-    text-align: center;
-}
-
-.contacto p {
-    margin: 5px 0;
-}
-
-/* SECCIÓN INFO */
-.info {
-    padding: 30px;
-    text-align: center;
-}
-
-.info p {
-    max-width: 700px;
-    margin: 10px auto;
-}
-
-/* FOOTER */
-footer {
-    background: #00aa30;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-/* POPUP LEGAL */
-#legalPopup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.popup-content {
-    background: white;
-    width: 90%;
-    max-width: 600px;
-    max-height: 80vh;
-    overflow-y: auto;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.popup-content button {
-    margin-top: 15px;
-    padding: 12px;
-    width: 100%;
-    background: #00aa30;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
+body {margin:0;font-family:Arial,sans-serif;line-height:1.6;}
+header {background:#00aa30;color:#fff;padding:15px;text-align:center;}
+.hero {background:#e8f5e9;padding:40px;text-align:center;}
+.hero h1 {font-size:32px;}
+.container {max-width:900px;margin:auto;padding:20px;}
+.card {background:#fff;border-radius:10px;padding:20px;margin:20px 0;box-shadow:0 2px 8px rgba(0,0,0,0.1);} 
+footer {background:#00aa30;color:#fff;text-align:center;padding:20px;margin-top:30px;}
+a {color:#00aa30;text-decoration:none;font-weight:bold;cursor:pointer;}
+.hidden {display:none;}
 </style>
 </head>
 
 <body>
 
-<!-- POPUP LEGAL -->
-<div id="legalPopup">
-    <div class="popup-content">
-        <h2>Términos y Condiciones</h2>
-
-        <p>
-        Este sitio web es un portal <strong>informativo</strong> sobre comida popular colombiana.
-        No vendemos productos ni solicitamos datos financieros.
-        </p>
-
-        <h3>Uso del sitio</h3>
-        <p>
-        El contenido es solo educativo y cultural. El usuario es responsable del uso que haga de la información.
-        </p>
-
-        <h3>Publicidad</h3>
-        <p>
-        Este sitio puede mostrar anuncios de terceros como Google Ads.
-        </p>
-
-        <h3>Política de privacidad</h3>
-        <p>
-        Podemos usar cookies para mejorar la experiencia del usuario.
-        No recopilamos datos personales sensibles ni financieros.
-        </p>
-
-        <h3>Importante</h3>
-        <p>
-        Este sitio NO ofrece servicios financieros, inversiones, préstamos ni formularios de crédito.
-        </p>
-
-        <button onclick="aceptar()">Aceptar y continuar</button>
-    </div>
-</div>
-
-<!-- HEADER -->
 <header>
-    <h2>Comida Colombiana</h2>
+<h2>Recetas Colombianas</h2>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-    <h1>Comida Popular Colombiana</h1>
-    <p>
-        Descubre recetas, cultura y tradición gastronómica de Colombia.
-        Este es un sitio completamente informativo.
-    </p>
-
-    <a href="menu.html">
-        <button>Ver menú</button>
-    </a>
+<h1>Recetas tradicionales de Colombia</h1>
+<p>Explora platos típicos con ingredientes reales y preparación paso a paso.</p>
 </section>
 
-<!-- CONTACTO -->
-<section class="contacto">
-    <h3>Contacto</h3>
-    <p><strong>Dirección:</strong> Calle 23 #45-67, Medellín, Colombia</p>
-    <p><strong>Teléfono:</strong> +57 300 451 4567</p>
-</section>
+<div class="container" id="mainContent">
 
-<!-- INFO EXTRA -->
-<section class="info">
-    <h3>Sobre la gastronomía colombiana</h3>
-    <p>
-        La comida colombiana es una mezcla de tradiciones indígenas, españolas y africanas, lo que la convierte en una de las más diversas de América Latina. Cada región tiene platos únicos llenos de sabor y cultura.
-    </p>
+<div class="card">
+<h2>Bandeja Paisa</h2>
+<p><strong>Ingredientes:</strong> arroz, frijoles, carne molida, chicharrón, huevo, aguacate.</p>
+<p><strong>Preparación:</strong> Cocina los frijoles previamente, prepara el arroz blanco y sirve junto con los demás ingredientes fritos o asados.</p>
+</div>
 
-    <p>
-        Desde la bandeja paisa hasta el ajiaco, pasando por las arepas y empanadas, Colombia ofrece una gran variedad de recetas tradicionales que reflejan su historia y riqueza cultural.
-    </p>
-</section>
+<div class="card">
+<h2>Ajiaco Santafereño</h2>
+<p><strong>Ingredientes:</strong> pollo, papa criolla, papa pastusa, mazorca, guascas.</p>
+<p><strong>Preparación:</strong> Cocina el pollo con las papas y agrega guascas para dar el sabor característico.</p>
+</div>
 
-<!-- FOOTER -->
+<div class="card">
+<h2>Arepas</h2>
+<p><strong>Ingredientes:</strong> harina de maíz, agua, sal.</p>
+<p><strong>Preparación:</strong> Mezcla los ingredientes, forma las arepas y cocínalas en sartén hasta dorar.</p>
+</div>
+
+<div class="card">
+<h3>Sobre este sitio</h3>
+<p>Este sitio es un portal informativo sobre gastronomía colombiana. No solicitamos datos personales ni realizamos ventas.</p>
+<p>Contacto: contacto@tusitio.com</p>
+</div>
+
+</div>
+
+<!-- PRIVACY POLICY -->
+<div class="container hidden" id="privacy">
+<div class="card">
+<h2>Política de Privacidad</h2>
+<p>Este sitio utiliza cookies para mejorar la experiencia del usuario.</p>
+<p>Podemos utilizar servicios de terceros como Google Ads para mostrar publicidad relevante.</p>
+<p>No recopilamos datos personales sensibles como contraseñas o información financiera.</p>
+<p>La información recopilada es anónima y se utiliza únicamente con fines estadísticos.</p>
+</div>
+</div>
+
+<!-- TERMS -->
+<div class="container hidden" id="terms">
+<div class="card">
+<h2>Términos y Condiciones</h2>
+<p>Este sitio web tiene fines exclusivamente informativos sobre gastronomía colombiana.</p>
+<p>No ofrecemos garantías sobre la exactitud o resultados derivados del uso del contenido.</p>
+<p>No nos hacemos responsables por el uso que los usuarios hagan de la información presentada.</p>
+<p>El uso de este sitio implica la aceptación de estos términos.</p>
+</div>
+</div>
+
 <footer>
-    <p>© Sitio informativo gastronómico colombiano</p>
+<p>© 2026 Recetas Colombianas</p>
+<p>
+<a onclick="showSection('mainContent')">Inicio</a> |
+<a onclick="showSection('privacy')">Política de Privacidad</a> |
+<a onclick="showSection('terms')">Términos y Condiciones</a>
+</p>
 </footer>
 
 <script>
-function aceptar() {
-    document.getElementById("legalPopup").style.display = "none";
+function showSection(id) {
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('privacy').style.display = 'none';
+    document.getElementById('terms').style.display = 'none';
+    document.getElementById(id).style.display = 'block';
 }
 </script>
-
 
 </body>
 </html>
